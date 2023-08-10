@@ -1,0 +1,67 @@
+<nav class="navbar fixed-top navbar-expand-md navbar-light white double-nav scrolling-navbar">
+  <div class="toolbar" role="banner">
+  <div class="col-sm-1">
+    <h4><i class='fas fa-home'></i></h4>
+  </div>
+  <div class="row">
+    <div class="col-auto">
+      <span class="employee" (click)="goToUsers()"><b><i class='fas fa-user'> Users</i></b></span>
+    </div>
+    <div class="col-auto">
+      <span class="employee" (click)="goToProducts()"><b><i class='fas fa-shopping-bag'> Products</i></b></span>
+    </div>
+    <div class="col-auto">
+      <span class="employee" (click)="goToOrders()"><b><i class='fas fa-file-signature'> Orders</i></b></span>
+    </div>
+    <div class="col-auto" style="position: absolute;right: 5px;">
+      <span class="employee" (click)="logout()"><b><i class='fas fa-power-off'></i></b></span>
+    </div>
+  </div>
+</div>
+</nav>
+
+
+<!-- <div class="container-xl">
+<div class="table-responsive">
+  <div class="table-wrapper">
+    <div class="table-title">
+      <div class="row">
+        <div class="col-sm-6">
+          <h4><b>Manage users</b></h4>
+        </div>
+        <div class="col-sm-6">
+          <button class="btn btn-success" (click)="AddUser()">
+            <i class='fas fa-plus-circle'></i><span> ADD</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <table class="table table-striped table-hover table-bordered table-content">
+      <thead>
+        <tr class="center-align">
+          <th>Username</th>
+          <th>Depost</th>
+          <th>Role</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of usersList" class="center-align">
+          <td>{{ user.username }}</td>
+          <td>{{ user.deposit }}</td>
+          <td>{{ user.role }}</td>
+          <td>
+            <a href="#" [routerLink]="['/ViewEmployee/', user.id]" class="btn"><i class='fas fa-eye view'></i></a>
+            <a href="#" [routerLink]="['/EditEmployee/', user.id]" class="btn"><i class="fa fa-edit edit"></i></a>
+            <button type="button" (click)="deleteUserConfirmation(user)" class="btn"><i class='fas fa-trash-alt delete'></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td *ngIf="usersList.length == 0" colspan="6">No Users Found</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div> -->
